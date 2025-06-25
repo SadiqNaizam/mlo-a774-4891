@@ -61,13 +61,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        surface: '#252526',
+        'accent-secondary': '#6A85D9',
+        success: '#81C784',
+        error: '#E57373',
+        'secondary-text': '#A5A5A5'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -92,5 +100,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
